@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1 id="title">Etch-a-Sketch</h1>
+
+    <div id="etch-a-sketch">
+        <div id="ui-paint">
+            <div id="ui">
+                <input id="color-picker" class="ui-block" type="color"></input>
+
+                <div id="modes" class="ui-block">
+                    <p>Mode</p>
+                    <div>
+                        <button id="color-mode" class="mode">Color</button>
+                        <button id="rainbow-mode" class="mode">Rainbow</button>
+                        <button id="shade-mode" class="mode">Shade</button>
+                    </div>
+                </div>
+
+                <button id="eraser" class="ui-block">
+                    <p>Eraser</p>
+                </button>
+                <div id="grid-selector" class="ui-block">
+                    <div id="grid-size-value">16 x 16</div>
+                    <input id="grid-size" type="range" value="16" min="1" max="64"></input>
+                </div>
+            </div>
+
+            <div id="paint-grid"></div>
+        </div>
+
+        <div id="reset button">
+            <button id="clear-btn"><strong>CLEAR</strong></button>
+        </div>
+    </div>
+
+    <footer></footer>
+    
+</body>
+</html>
