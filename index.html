@@ -15,10 +15,10 @@
     <div id="etch-a-sketch">
         <div id="ui-paint">
             <div id="ui">
-                <input id="color-picker" class="ui-block" type="color"></input>
+                <input id="color-picker" type="color" onclick="changeColor()"></input>
 
                 <div id="modes" class="ui-block">
-                    <p>Mode</p>
+                    <p><strong>Mode</strong></p>
                     <div>
                         <button id="color-mode" class="mode">Color</button>
                         <button id="rainbow-mode" class="mode">Rainbow</button>
@@ -26,11 +26,11 @@
                     </div>
                 </div>
 
-                <button id="eraser" class="ui-block">
-                    <p>Eraser</p>
+                <button id="eraser" class="ui-block" onclick="erase()">
+                    <p><strong>Eraser</strong></p>
                 </button>
                 <div id="grid-selector" class="ui-block">
-                    <div id="grid-size-value">16 x 16</div>
+                    <div id="grid-size-value"> <strong>16 x 16</strong></div>
                     <input id="grid-size" type="range" value="16" min="1" max="64"></input>
                 </div>
             </div>

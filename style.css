@@ -56,8 +56,10 @@ body {
 #color-picker {
     margin: 0;
     padding: 0;
-    height: 3em;
-    border: 1px solid black;
+    height: 3.5em;
+    width: 100%;
+    border: hidden;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -83,12 +85,28 @@ body {
     background-color: #CCC;
     width: 5em;
     text-align: center;
+    cursor: pointer;
+}
+
+#eraser {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+#grid-size {
+    cursor: pointer;
 }
 
 #paint-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
     width: 33em;
     height: 33em;
     padding: 10px;
@@ -99,11 +117,12 @@ body {
 }
 
 .grid-block {
-    background-color: #DDD;
-    width: 30px;
-    height: 30px;
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
+    border: solid 1px #EEE;
 }
 
 #clear-btn {
@@ -113,4 +132,5 @@ body {
     border-radius: 10px;
     background-color: rgb(255, 79, 56);
     color: #444;
+    cursor: pointer;
 }
