@@ -15,24 +15,29 @@
     <div id="etch-a-sketch">
         <div id="ui-paint">
             <div id="ui">
-                <input id="color-picker" type="color" onclick="changeColor()"></input>
+                <input id="color-picker" type="color"></input>
 
                 <div id="modes" class="ui-block">
                     <p><strong>Mode</strong></p>
                     <div>
-                        <button id="color-mode" class="mode">Color</button>
-                        <button id="rainbow-mode" class="mode">Rainbow</button>
-                        <button id="shade-mode" class="mode">Shade</button>
+                        <button id="color-mode" class="mode" onclick="colorOn()">Color</button>
+                        <button id="rainbow-mode" class="mode" onclick="rainbowOn()">Rainbow</button>
+                        <button id="shade-mode" class="mode" onclick="shadeOn()">Shade</button>
                     </div>
                 </div>
 
-                <button id="eraser" class="ui-block" onclick="erase()">
+                <button id="eraser" class="ui-block yellow-background" onclick="eraserOn()">
                     <p><strong>Eraser</strong></p>
                 </button>
+
                 <div id="grid-selector" class="ui-block">
-                    <div id="grid-size-value"> <strong>16 x 16</strong></div>
+                    <div id="grid-size-value">16 x 16</div>
                     <input id="grid-size" type="range" value="16" min="1" max="64"></input>
                 </div>
+
+                <button id="grid-toggle" class="ui-block yellow-background" onclick="gridOnOff()">
+                    <p><strong>Grid</strong></p>
+                </button>
             </div>
 
             <div id="paint-grid"></div>
