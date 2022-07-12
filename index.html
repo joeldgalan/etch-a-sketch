@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
+    </script>
 </head>
 
 <body>
@@ -20,7 +22,7 @@
                 <div id="modes" class="ui-block">
                     <p><strong>Mode</strong></p>
                     <div>
-                        <button id="color-mode" class="mode" onclick="colorOn()">Color</button>
+                        <button id="color-mode" class="mode selected" onclick="colorOn()">Color</button>
                         <button id="rainbow-mode" class="mode" onclick="rainbowOn()">Rainbow</button>
                         <button id="shade-mode" class="mode" onclick="shadeOn()">Shade</button>
                     </div>
@@ -38,9 +40,19 @@
                 <button id="grid-toggle" class="ui-block yellow-background" onclick="gridOnOff()">
                     <p><strong>Grid</strong></p>
                 </button>
+
+                <button id="screenshot" class="ui-block yellow-background" onclick="takeShot()">
+                    <p><strong>Screenshot</strong></p>
+                </button>
             </div>
 
             <div id="paint-grid"></div>
+
+            <div id="output">
+                <button id="close-pic-btn" onclick="hideShot()">
+                    <p><strong>x</strong></p>
+                </button>
+            </div>
         </div>
 
         <div id="reset button">

@@ -78,7 +78,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 5px;
-    height: 4em;
+    height: 5.5em;
     padding: 0;
     margin: 0;
 }
@@ -111,7 +111,7 @@ button.selected {
     color: #EEE;
 }
 
-#eraser {
+#eraser, #grid-toggle, #screenshot {
     text-align: center;
     display: flex;
     align-items: center;
@@ -125,7 +125,7 @@ button.selected {
     background-color: #ece4b8;
 }
 
-#eraser:hover, #grid-toggle:hover {
+#eraser:hover, #grid-toggle:hover, #screenshot:hover {
     color: #017df1;
 }
 
@@ -135,16 +135,6 @@ button.selected {
 
 #grid-size-value {
     font-weight: bold;
-}
-
-#grid-toggle {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: inherit;
-    font-size: inherit;
-    cursor: pointer;
 }
 
 #paint-grid {
@@ -176,5 +166,37 @@ button.selected {
     border-radius: 10px;
     background-color: rgb(255, 79, 56);
     color: #444;
+    cursor: pointer;
+}
+
+#output {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    background-color: white;
+    top: auto;
+    transition: 0.5s;
+    left: auto;
+    opacity: 0;
+}
+
+#close-pic-btn {
+    background-color: #BBB;
+    color: white;
+    font-size: 3em;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 1.5em;
+    max-height: 1.5em;
+    opacity: 0.75;
+    position: absolute;
+    right: 10px;
     cursor: pointer;
 }
